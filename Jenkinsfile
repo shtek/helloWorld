@@ -5,11 +5,13 @@ pipeline {
         jdk '17'
     }
     stages {
-        stage('Build') {
-            steps {
-               echo 'ffjfjf'
+       stage ('Initialize') {
+                   steps {
 
-            }
-        }
+                           echo "PATH = ${PATH}"
+                           echo "M2_HOME = ${M2_HOME}"
+
+                         }
+                              }
     }
 }
