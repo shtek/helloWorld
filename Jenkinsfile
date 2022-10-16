@@ -17,7 +17,7 @@ pipeline {
      stage ('Build') {
                 steps {
   bat 'echo %PATH%'
-//                    sh 'mvn -Dmaven.test.failure.ignore=true install'
+bat 'mvn -Dmaven.test.failure.ignore=true install'
                 }
                // post {
                //     success {
