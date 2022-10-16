@@ -30,6 +30,16 @@ bat 'mvn -Dmaven.test.failure.ignore=true install'
                       }
 
       }
+      stage('Package'){
+         steps{
+            bat 'mvn package'
+         }
+         post {
+           success{
+              archiveArtifacts 'target/*.jar'
+           }
+         }
+      }
 
     }
 }
