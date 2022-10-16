@@ -1,10 +1,17 @@
 package org.example;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-class DummyTest {
+public class DummyTest {
 
-    @org.junit.jupiter.api.Test
-    void dosomething() {
+    @Test
+    public void dosomething() {
+        Dummy d = new Dummy();
+
+        Assert.assertEquals("a",d.dosomething());
+
     }
 }
