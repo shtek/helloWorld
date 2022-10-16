@@ -22,7 +22,7 @@ bat 'mvn -Dmaven.test.failure.ignore=true install'
                 post {
                     success {
                     //junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
-                         junit allowEmptyResults: true, testResults: 'target/surefire-reports/**/*.xml'
+                         junit  testResults: 'target/surefire-reports/**/*.xml'
                    }
                 }
             }
