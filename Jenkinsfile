@@ -19,12 +19,17 @@ pipeline {
   bat 'echo %PATH%'
 bat 'mvn -Dmaven.test.failure.ignore=true install'
                 }
-                post {
-                    success {
-                    //junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
-                         junit  testResults: 'target/surefire-reports/**/*.xml'
-                   }
-                }
+
+
             }
+      stage('Test'){
+                     steps{
+
+                          //junit allowEmptyResults: true, testResults: '**/test-results/*.xml'
+                               junit  testResults: 'target/surefire-reports/**/*.xml'
+                      }
+
+      }
+
     }
 }
